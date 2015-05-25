@@ -55,14 +55,21 @@ describe EuroCurrencyConversionRate do
     context "when currency is present in the response" do
       ['CHF', 'INR', 'NZD', 'USD'].each do |ca|
         it "returns non nil float exchange rate for #{ca}" do
-          expect(EuroCurrencyConversionRate.exchange_rate(ca)).to be_a_kind_of Float
+          expect(EuroCurrencyConversionRate.rate(ca)).to be_a_kind_of Float
+        end
+      end
+      context 'currency is in lower case' do 
+        ['chf', 'inr', 'nzd', 'usd'].each do |ca|
+          it "returns non nil float exchange rate for #{ca}" do
+            expect(EuroCurrencyConversionRate.rate(ca)).to be_a_kind_of Float
+          end
         end
       end
     end
 
     context 'when currency is not present in the response' do
       it 'returns nil' do
-        expect(EuroCurrencyConversionRate.exchange_rate('invalid_curr')).to eq nil
+        expect(EuroCurrencyConversionRate.rate('invalid_curr')).to eq nil
       end
     end
   end
