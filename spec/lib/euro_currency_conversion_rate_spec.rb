@@ -51,7 +51,7 @@ describe EuroCurrencyConversionRate do
     allow(HTTParty).to receive(:get).and_return xml_response
   end
 
-  describe '::exchange_rate' do
+  describe '::rate' do
     context "when currency is present in the response" do
       ['CHF', 'INR', 'NZD', 'USD'].each do |ca|
         it "returns non nil float exchange rate for #{ca}" do

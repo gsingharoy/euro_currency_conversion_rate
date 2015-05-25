@@ -8,13 +8,13 @@ For support with the Ruby class money please use the gem [here](https://github.c
 
 ## Installation
 ```shell
-gem install euro_currency_conversion_Rate
+gem install euro_currency_conversion_rate
 ```
 
 ## Usage
 
 ```shell
-require 'euro_currency_conversion_Rate'
+require 'euro_currency_conversion_rate'
 conversion_rate = EuroCurrencyConversionrate.rate('USD')
 ```
 
