@@ -9,7 +9,7 @@ class EuroCurrencyConversionRate
     # gets the latest exchange rate in float for a currency w.r.t. EUR
     #
     # Example:
-    #   >> EuroCurrencyConversionRate.rate('EUR')
+    #   >> EuroCurrencyConversionRate.rate('USD')
     #   => 1.21
     #   
     #
