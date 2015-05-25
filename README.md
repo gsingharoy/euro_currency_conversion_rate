@@ -1,4 +1,4 @@
-# Euro Currency Conversion Rate
+# Euro Currency Conversion Rate [![Build Status](https://travis-ci.org/gsingharoy/euro_currency_conversion_rate.svg?branch=master)](https://travis-ci.org/gsingharoy/euro_currency_conversion_rate) [![Gem Version](https://badge.fury.io/rb/euro_currency_conversion_rate.svg)](http://badge.fury.io/rb/euro_currency_conversion_rate)
 
 This is a useful gem which returns the current exchange rates of various currencies with respect to euro. This gets the latest exchange rates from the [European Central Bank SOAP service](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html). 
 
