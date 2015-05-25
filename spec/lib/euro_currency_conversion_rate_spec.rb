@@ -59,10 +59,15 @@ describe EuroCurrencyConversionRate do
         end
       end
       context 'currency is in lower case' do 
-        ['chf', 'inr', 'nzd', 'usd'].each do |ca|
+        ['chf', 'inr', 'Nzd', 'Usd'].each do |ca|
           it "returns non nil float exchange rate for #{ca}" do
             expect(EuroCurrencyConversionRate.rate(ca)).to be_a_kind_of Float
           end
+        end
+      end
+      context 'when EUR is passed' do 
+        it 'returns 1.0' do 
+          expect(EuroCurrencyConversionRate.rate('EUR')).to eq 1.0
         end
       end
     end
