@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    euro_currency_conversion_rate (0.1.1)
+    euro_currency_conversion_rate (0.3.0)
 
 GEM
   remote: https://rubygems.org/
