@@ -70,8 +70,17 @@ describe EuroCurrencyConversionRate do
           expect(EuroCurrencyConversionRate.rate('EUR')).to eq 1.0
         end
       end
+      context 'when currency passed is in sym' do
+        it 'returns the correct rate' do
+          expected_response = currency_rate_hash_from_sample_response
+          available_currencies.map{ |ac| ac.downcase.to_sym }.each do |curr|
+            expect(
+              EuroCurrencyConversionRate.rate(curr)
+            ).to eq expected_response[curr]
+          end
+        end
+      end
     end
-
     context 'when currency is not present in the response' do
       it 'returns nil' do
         expect(EuroCurrencyConversionRate.rate('invalid_curr')).to eq nil
