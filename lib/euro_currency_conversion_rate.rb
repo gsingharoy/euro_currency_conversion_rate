@@ -9,15 +9,16 @@ class EuroCurrencyConversionRate
     # returns the latest exchange rate in float for a currency w.r.t. EUR
     #
     # Example:
-    #   >> EuroCurrencyConversionRate.rate('USD')
+    #   >> EuroCurrencyConversionRate.rate(:usd)
     #   => 1.21
     #
     #
     # Arguments:
-    #   currency: (String)
+    #   currency: (Symbol)
     def rate(currency)
-      return 1.0 if currency.upcase == 'EUR'
-      currency_exchange_rate = currency_exchange_array.detect{ |ca| ca['currency'] == currency.upcase }
+      currency = currency.to_s.upcase
+      return 1.0 if currency == 'EUR'
+      currency_exchange_rate = currency_exchange_array.detect{ |ca| ca['currency'] == currency }
       currency_exchange_rate['rate'].to_f unless currency_exchange_rate.nil?
     end
 
