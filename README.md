@@ -17,6 +17,8 @@ gem install euro_currency_conversion_rate
 
 ```shell
 require 'euro_currency_conversion_rate'
+conversion_rate = EuroCurrencyConversionRate.rate(:usd)
+# => 1.1389
 conversion_rate = EuroCurrencyConversionRate.rate('USD')
 # => 1.1389
 ```
