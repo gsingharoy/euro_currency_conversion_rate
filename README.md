@@ -17,9 +17,22 @@ gem install euro_currency_conversion_rate
 
 ```shell
 require 'euro_currency_conversion_rate'
-conversion_rate = EuroCurrencyConversionrate.rate('USD')
+conversion_rate = EuroCurrencyConversionRate.rate('USD')
+# => 1.1389
+```
+To get all the exchange rates
+```shell
+conversion_rates_hash = EuroCurrencyConversionRate.rates
+# => {:usd=>1.1389, :jpy=>136.33, :bgn=>1.9558, :czk=>27.401, :dkk=>7.464, :gbp=>0.727, :huf=>307.55, :pln=>4.0615, :ron=>4.4465, :sek=>9.3836, :chf=>1.0482, :nok=>8.3815, :hrk=>7.5325, :rub=>56.0016, :try=>2.9385, :aud=>1.4228, :brl=>3.4161, :cad=>1.3733, :cny=>7.0661, :hkd=>8.8283, :idr=>14967.91, :ils=>4.3569, :inr=>72.5115, :krw=>1236.94, :mxn=>17.1188, :myr=>4.065, :nzd=>1.5356, :php=>50.596, :sgd=>1.5056, :thb=>37.977, :zar=>13.5051}
 ```
 
+To get exchange rates of some currencies
+```shell
+conversion_rates_hash = EuroCurrencyConversionRate.rates([:usd, :inr, :chf])
+# => {:usd=>1.1389, :chf=>1.0482, :inr=>72.5115}
+```
+
+Please not that it is not important to pass the currencies as symbols. They can be strings too and are case insensitive.
 
 ## Contributing
 
