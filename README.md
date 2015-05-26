@@ -1,10 +1,12 @@
-# Euro Currency Conversion Rate [![Build Status](https://travis-ci.org/gsingharoy/euro_currency_conversion_rate.svg?branch=master)](https://travis-ci.org/gsingharoy/euro_currency_conversion_rate) [![Gem Version](https://badge.fury.io/rb/euro_currency_conversion_rate.svg)](http://badge.fury.io/rb/euro_currency_conversion_rate)
+# Euro Currency Conversion Rate
 
-This is a useful gem which returns the current exchange rates of various currencies with respect to euro. This gets the latest exchange rates from the [European Central Bank SOAP service](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html). 
+[![Build Status](https://travis-ci.org/gsingharoy/euro_currency_conversion_rate.svg?branch=master)](https://travis-ci.org/gsingharoy/euro_currency_conversion_rate) [![Gem Version](https://badge.fury.io/rb/euro_currency_conversion_rate.svg)](http://badge.fury.io/rb/euro_currency_conversion_rate)
 
-This gem has no dependency to Nokogiri and uses httparty to parse the xml response. 
+This is a useful gem which returns the current exchange rates of various currencies with respect to euro. This gets the latest exchange rates from the [European Central Bank SOAP service](http://www.ecb.europa.eu/stats/exchange/eurofxref/html/index.en.html).
 
-For support with the Ruby class money please use the gem [here](https://github.com/RubyMoney/eu_central_bank). 
+This gem has no dependency to Nokogiri and uses httparty to parse the xml response.
+
+For support with the Ruby class money please use the gem [here](https://github.com/RubyMoney/eu_central_bank).
 
 ## Installation
 ```shell
